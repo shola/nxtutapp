@@ -1,0 +1,19 @@
+{
+  "name": "feature",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/books/feature/src",
+  "projectType": "library",
+  "tags": ["scope:books"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/books/feature",
+        "main": "libs/books/feature/src/index.ts",
+        "tsConfig": "libs/books/feature/tsconfig.lib.json",
+        "assets": ["libs/books/feature/*.md"]
+      }
+    }
+  }
+}
